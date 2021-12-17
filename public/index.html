@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Javaro | HTML, CSS, JS</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/9.6.1/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/9.6.1/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/9.6.1/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/9.6.1/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/9.6.1/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/9.6.1/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/9.6.1/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/9.6.1/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/9.6.1/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/9.6.1/firebase-performance-compat.js"></script>
+  <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Bakbak+One&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/output.css">
+  <script src="js/script.js"></script>
+
+</head>
+
+<body>
+
+
+
+  <div class="flex h-screen ">
+    <div class="min-w-min w-1/12 bg-gray-900 h-full float-left fixed z-0 flex justify-center flex-col pt-3 pb-3">
+
+
+      <div class="icon--container cursor-pointer has-tooltip" onclick="scrollToEl('#home')">
+        <span class="tooltip">Home</span>
+        <svg class=" text-5xl" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+          stroke-linecap="round" stroke-linejoin="round" height=".55em" width=".55em"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </div>
+
+
+      <div class="icon--container cursor-pointer has-tooltip">
+        <span class="tooltip">Search</span>
+
+        <svg class="text-5xl" stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1"
+          viewBox="0 0 16 16" height=".55em" width=".55em" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M15.504 13.616l-3.79-3.223c-0.392-0.353-0.811-0.514-1.149-0.499 0.895-1.048 1.435-2.407 1.435-3.893 0-3.314-2.686-6-6-6s-6 2.686-6 6 2.686 6 6 6c1.486 0 2.845-0.54 3.893-1.435-0.016 0.338 0.146 0.757 0.499 1.149l3.223 3.79c0.552 0.613 1.453 0.665 2.003 0.115s0.498-1.452-0.115-2.003zM6 10c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z">
+          </path>
+        </svg>
+      </div>
+
+      <div class="icon--container cursor-pointer has-tooltip" onclick="scrollToEl('#html')">
+        <span class="tooltip">HTML</span>
+        <svg class="text-5xl" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+          height=".55em" width=".55em" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M7.375 16.781l1.25-1.562L4.601 12l4.024-3.219-1.25-1.562-5 4C2.138 11.409 2 11.696 2 12s.138.591.375.781L7.375 16.781zM16.625 7.219l-1.25 1.562L19.399 12l-4.024 3.219 1.25 1.562 5-4C21.862 12.591 22 12.304 22 12s-.138-.591-.375-.781L16.625 7.219z">
+          </path>
+          <path transform="rotate(102.527 12 12)" d="M2.78 11H21.219V13.001H2.78z"></path>
+        </svg>
+      </div>
+
+      <div class="icon--container cursor-pointer has-tooltip">
+        <span class="tooltip">CSS</span>
+        <svg class="text-5xl" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+          height=".55em" width=".55em" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path
+              d="M4 18v-3.7a1.5 1.5 0 0 0-1.5-1.5H2v-1.6h.5A1.5 1.5 0 0 0 4 9.7V6a3 3 0 0 1 3-3h1v2H7a1 1 0 0 0-1 1v4.1A2 2 0 0 1 4.626 12 2 2 0 0 1 6 13.9V18a1 1 0 0 0 1 1h1v2H7a3 3 0 0 1-3-3zm16-3.7V18a3 3 0 0 1-3 3h-1v-2h1a1 1 0 0 0 1-1v-4.1a2 2 0 0 1 1.374-1.9A2 2 0 0 1 18 10.1V6a1 1 0 0 0-1-1h-1V3h1a3 3 0 0 1 3 3v3.7a1.5 1.5 0 0 0 1.5 1.5h.5v1.6h-.5a1.5 1.5 0 0 0-1.5 1.5z">
+            </path>
+          </g>
+        </svg>
+      </div>
+
+      <div class="icon--container cursor-pointer has-tooltip">
+        <span class="tooltip">JS</span>
+        <svg class="text-5xl" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+          height=".55em" width=".55em" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M208 88.001h-80v212.498c0 52.58-18.032 67.261-49.412 67.261-14.705 0-27.948-2.521-38.25-6.063L32 423.904C46.7 428.966 69.259 432 86.907 432 158.955 432 208 398.129 208 301.02V88.001zM382.463 80C305.02 80 256 123.998 256 182.154c0 50.083 37.751 81.44 92.641 101.665 39.7 14.158 55.392 26.808 55.392 47.539 0 22.756-18.139 37.425-52.448 37.425-31.863 0-60.789-10.64-80.394-21.255v-.021L256 410.727c18.639 10.638 53.441 21.255 91.167 21.255C437.854 431.98 480 383.43 480 326.284c0-48.55-26.958-79.9-85.278-102.163-43.139-17.191-61.27-26.795-61.27-48.542 0-17.2 15.688-32.869 48.043-32.869 31.846 0 53.744 10.707 66.505 17.291l19.125-64C447.125 87.22 420.188 80 382.463 80z">
+          </path>
+        </svg>
+      </div>
+
+
+    </div>
+    <div class="w-11/12 content--main float-right ml-auto relative">
+   
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadEl = document.querySelector('#load');
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      // // The Firebase SDK is initialized and available here!
+      //
+      // firebase.auth().onAuthStateChanged(user => { });
+      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+      // firebase.firestore().doc('/foo/bar').get().then(() => { });
+      // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+      // firebase.messaging().requestPermission().then(() => { });
+      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+      // firebase.analytics(); // call to activate
+      // firebase.analytics().logEvent('tutorial_completed');
+      // firebase.performance(); // call to activate
+      //
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+      try {
+        let app = firebase.app();
+        let features = [
+          'auth',
+          'database',
+          'firestore',
+          'functions',
+          'messaging',
+          'storage',
+          'analytics',
+          'remoteConfig',
+          'performance',
+        ].filter(feature => typeof app[feature] === 'function');
+        loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+      } catch (e) {
+        console.error(e);
+        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+      }
+    });
+  </script>
+  <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new Tooltip(tooltipTriggerEl);
+    });
+  </script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

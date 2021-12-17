@@ -1,0 +1,16 @@
+{
+  "name": "tailwind-html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.6.1",
+    "tailwindcss": "^3.0.5"
+  }
+}
